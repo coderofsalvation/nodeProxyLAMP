@@ -36,10 +36,17 @@ then..wipe your tears of joy and make sure other services (apache/lighthttpd e.g
 Then, review /etc/forever.d/proxyserver.conf to your likings:
 
     { 
-        "some.domain.org":     "127.0.0.1:81",    // <-- redirects to apache/lighthttpd
-        "sub.some.domain.org": "127.0.0.1:8001",  // <-- redirects to a websocket/node app
-        "some.other.com":      "127.0.0.1:8002",  // <-- redirects to something else
+        "some.domain.org":    "127.0.0.1:81",               <-- redirects to apache/lighthttpd
+        "some.other.com":     "127.0.0.1:8002",             <-- redirects to something else
+        "some.other.com/foo": "127.0.0.1:8003/socket.io",   <-- socket.io websocket redirect
     }
+
+Now your browser\'s websocket request can be easily done in Chrome e.g. by writing:
+
+    <script type="text/javascript" src="https://github.com/LearnBoost/socket.io/blob/master/client/socket.io.js"/>
+    <script type="text/javascript">
+      var socket = io.connect("http://lemon.mannetje.org:80/", { resource: "redis" } );
+    </script>
 
 (For more sexy routing read [this](http://blog.nodejitsu.com/http-proxy-intro) )
 Then run as root:
