@@ -25,12 +25,12 @@ How
 Well you can run this:
 
     (login to your new productionserver)
-    git clone https://github.com/coderofsalvation/nodeServerPlatform.git
-    cd nodeServerPlatform
+    git clone https://github.com/coderofsalvation/nodeProxyLAMP.git
+    cd nodeProxyLAMP
     sudo ./install.sh
 
 Done!
-(or review [install.sh](https://github.com/coderofsalvation/nodeServerPlatform/blob/master/install.sh) if you wanna check before doing that.    )
+(or review [install.sh](https://github.com/coderofsalvation/nodeProxyLAMP/blob/master/install.sh) if you wanna check before doing that.    )
 
 then..wipe your tears of joy and make sure other services (apache/lighthttpd e.g.) are no longer running on port 80, but on 81.
 Then, review /etc/forever.d/proxyserver.conf to your likings:
