@@ -29,7 +29,14 @@ Well you can run this:
     cd nodeServerPlatform
     sudo ./install.sh
 
-or review [install.sh](https://github.com/coderofsalvation/nodeServerPlatform/blob/master/install.sh) if you wanna check before doing that.    
+Done!
+(or review [install.sh](https://github.com/coderofsalvation/nodeServerPlatform/blob/master/install.sh) if you wanna check before doing that.    )
+
+then..wipe your tears of joy and make sure other services (apache/lighthttpd e.g.) are no longer running on port 80.
+Then run as root:
+
+    sudo update-rc.d foobar defaults
+    sudo /etc/init.d/forever start
 
 Dependancies
 ============
