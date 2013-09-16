@@ -1,7 +1,7 @@
-nodeServerPlatform
-==================
+nodeProxyLAMP
+=============
 
-installscript for Linuxservers to have a node multi-app multi-port environment up and running in no time
+installscript for Linuxservers to have a node multi-app, multi-port environment up and running in no time in conjunction with Apache.
 
 Problem
 =======
