@@ -32,7 +32,16 @@ Well you can run this:
 Done!
 (or review [install.sh](https://github.com/coderofsalvation/nodeServerPlatform/blob/master/install.sh) if you wanna check before doing that.    )
 
-then..wipe your tears of joy and make sure other services (apache/lighthttpd e.g.) are no longer running on port 80.
+then..wipe your tears of joy and make sure other services (apache/lighthttpd e.g.) are no longer running on port 80, but on 81.
+Then, review /etc/forever.d/proxyserver.conf to your likings:
+
+    { 
+        "some.domain.org":     "127.0.0.1:81",    // <-- redirects to apache/lighthttpd
+        "sub.some.domain.org": "127.0.0.1:8001",  // <-- redirects to a websocket/node app
+        "some.other.com":      "127.0.0.1:8002",  // <-- redirects to something else
+    }
+
+(For more sexy routing read [this](http://blog.nodejitsu.com/http-proxy-intro) )
 Then run as root:
 
     sudo update-rc.d foobar defaults
