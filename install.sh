@@ -19,6 +19,9 @@ fi
 sudo npm -g install forever  || _error  # this is needed to have your apps automatically restarted after crash/suprises
 npm install http-proxy       || _error  # with this you can redirect weburls (port 80) to nodejs ports (so webbrowser can easily access it)
 sed -i "s|/some/path|$CURPATH|g" forever.d/proxyserver.conf # setting right path for proxyserver
+echo "copying initscripts + configscripts" 
 cp init.d/* /etc/init.d/.               # copying forever initscript
-cp forever.d/* /etc/forever.d/.     # copying config files
-
+cp forever.d/* /etc/forever.d/.          # copying config files
+echo "adding forever service (apps will be restarted upon (server)crashes e.g.)" 
+sudo update-rc.d forever defaults
+sudo /etc/init.d/forever start

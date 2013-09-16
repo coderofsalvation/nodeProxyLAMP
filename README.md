@@ -48,11 +48,7 @@ Now your browser\'s websocket request can be easily done in Chrome e.g. by writi
       var socket = io.connect("http://lemon.mannetje.org:80/", { resource: "redis" } );
     </script>
 
-(For more sexy routing read [this](http://blog.nodejitsu.com/http-proxy-intro) )
-Then run as root:
-
-    sudo update-rc.d foobar defaults
-    sudo /etc/init.d/forever start
+For more sexy routing read [this](http://blog.nodejitsu.com/http-proxy-intro) 
 
 Dependancies
 ============
