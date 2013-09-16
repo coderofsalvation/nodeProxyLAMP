@@ -1,0 +1,5 @@
+{ 
+  "some.domain.org":     "127.0.0.1:80",
+  "some.domain.org/foo": "127.0.0.1:8000", 
+  "some.domain.org/bar": "127.0.0.1:8001" 
+}

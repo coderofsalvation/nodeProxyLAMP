@@ -1,0 +1,7 @@
+# this file is an example, remove the '.example'-part of the filename to get it working (or copy it)
+
+NODE_ROOT=/path/to/nodejs/app
+NODE_SCRIPT=script.js
+NODE_ENV=production
+USERNAME=nodejs
+PORT=8000
