@@ -3,8 +3,6 @@ var httpProxy = require('http-proxy')
 var config    = require("/etc/forever.d/proxyserver.json")
 
 proxyServer = httpProxy.createServer ({
-//    pathnameOnly: true,
-    hostnameOnly: true,
     router: config
 });
 
